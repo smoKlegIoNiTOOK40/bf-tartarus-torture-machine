@@ -30,7 +30,7 @@ example is `oren rests near the bench who`, then `where` → `near the bench`.
 
 ## What changed
 
--4,902-byte learned payload,30 words and eight-word context.
+- 4,902-byte learned payload,30 words and eight-word context.
 - BF executes model arithmetic, training, copy-position selection, decoding
   and independent numerical verification; host code handles files, I/O and UI.
 - Exact24/24 validation and48/48 test; both answers and EOS correct in8/8
