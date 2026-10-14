@@ -1,0 +1,402 @@
+[
+  {
+    "Bytes": 11516,
+    "Path": "codevec32-functions.ps1",
+    "SHA256": "2890AFBB0AE1F94339BC0BC3770203E6AE92E1CAEB620C01AB8C70A4AA671A88"
+  },
+  {
+    "Bytes": 11982,
+    "Path": "compactlookup32-functions.ps1",
+    "SHA256": "CA71A65E830FE742037708C8FC620508C83575F415418FF00B2BB1D3566D868D"
+  },
+  {
+    "Bytes": 5326,
+    "Path": "demo.ps1",
+    "SHA256": "162A514E0513063EA1C5091D4D2A95BF763594AE09E5FF2D4711DA0F87EB0C3E"
+  },
+  {
+    "Bytes": 6335,
+    "Path": "freqcount32-functions.ps1",
+    "SHA256": "2E159B3A3667C8EDA078C15663ACEA71EAE6A92CF3D2F623C347BDA8708E74FD"
+  },
+  {
+    "Bytes": 7937,
+    "Path": "freqtable32-functions.ps1",
+    "SHA256": "463D8D01668C7C138822312F802FB9CCDBDD9A31C8E9305C1EA75706C39F0661"
+  },
+  {
+    "Bytes": 2152,
+    "Path": "headadapt32-launcher.ps1",
+    "SHA256": "0D0D13F4EBCABF052463ACA50ADEC883EE3715D25AAB3F429239545E33A6C7EC"
+  },
+  {
+    "Bytes": 22341,
+    "Path": "hybridnative32-functions.ps1",
+    "SHA256": "3FC11DE6A88A8833B7F2A17E55894DB946330C3284DC82CBF314044DD6E89FDF"
+  },
+  {
+    "Bytes": 433,
+    "Path": "model/provenance.json",
+    "SHA256": "1F6AC887AB13FBFB6EFA09D0153792E1B1F968BB449B8BCC15758A320245C7B3"
+  },
+  {
+    "Bytes": 32,
+    "Path": "model/selected.bigram.labels",
+    "SHA256": "F1CBC68660F3FC27D23D8C1103614ADD7BFCF76E1C31E06BC27385A95E8FBCA7"
+  },
+  {
+    "Bytes": 450,
+    "Path": "model/selected.feature.labels",
+    "SHA256": "675A77CD03067C2742E2C5BCE50309289BF3C5896258008F23F1DA1B9EE17762"
+  },
+  {
+    "Bytes": 4096,
+    "Path": "model/selected.fine.labels",
+    "SHA256": "C02A8CB94F5A7594A4082CFB507885279434F263CC97F0B45BF6F7142BDEB133"
+  },
+  {
+    "Bytes": 324,
+    "Path": "model/selected.weights",
+    "SHA256": "5F308E649704B256E9A49F1525B25DE22C7992701136C414DCC20C71C7900BEE"
+  },
+  {
+    "Bytes": 1938,
+    "Path": "README.md",
+    "SHA256": "C3DDC68FCD55D7E27D8EF5D8F55A0FF5BCED03AD83F611ACBA8AD2BF50471A0E"
+  },
+  {
+    "Bytes": 646,
+    "Path": "runtime-helpers.json",
+    "SHA256": "D2275096FD47488D9B39F6149779A66292A7B98866AF311B5905EC5F62A6A461"
+  },
+  {
+    "Bytes": 2272,
+    "Path": "runtime.ps1",
+    "SHA256": "09F4D9A16876ADD3A36B42C50BF4D2C7A5A8165AF7A841559E0BFEB4AFD4243E"
+  },
+  {
+    "Bytes": 1412,
+    "Path": "SOURCE-RULES.md",
+    "SHA256": "E5BC5CC70FEA2C22ED75D0FAC71F717BD434F88BF00FEB50268AE8B55E04F47D"
+  },
+  {
+    "Bytes": 7796,
+    "Path": "textdata32-testlib.ps1",
+    "SHA256": "70C4DF44647497B2CDEDABEA5CA8AE11F4128AA78BD54BB6889A24CE5C3B4456"
+  },
+  {
+    "Bytes": 9186,
+    "Path": "texteval32-functions.ps1",
+    "SHA256": "DB384B6D5FBAB60E0C93C9AFBD1DE55FAA3A172DB2FA55C6ABFC1EA537063E41"
+  },
+  {
+    "Bytes": 13135,
+    "Path": "textgen32-functions.ps1",
+    "SHA256": "2F4A6A0CB218BE0DF19543BBA35F71E0905251A6DE6BD02E08DFFCB308408C3B"
+  },
+  {
+    "Bytes": 16998,
+    "Path": "textlearn32-functions.ps1",
+    "SHA256": "BA1AAAADE245F61E1FFF8FA3015EAAFBAE5D61283CED0AE6BE97D3D27A32A4CF"
+  },
+  {
+    "Bytes": 16342,
+    "Path": "textrefbatch32-functions.ps1",
+    "SHA256": "FCD9AA6C86F5A3D9A9BED017AA17ADF3E4A3725DE80907B8FFC4E23468819C2A"
+  },
+  {
+    "Bytes": 5719,
+    "Path": "tools/io-audit-v2/Benchmark-IOAudit.ps1",
+    "SHA256": "BB2ABBBC5C024B2A0E80416FF69E2D8DB23B0AEE9899D3214C03B4BA97FEB2CE"
+  },
+  {
+    "Bytes": 3204,
+    "Path": "tools/io-audit-v2/Complete-IOArchive.ps1",
+    "SHA256": "35F209184E3D4FEDF32B40AFF56ABB6AC8C09E4BD69A863064A3B2541F1CDBC6"
+  },
+  {
+    "Bytes": 17196,
+    "Path": "tools/io-audit-v2/FileAudit.cs",
+    "SHA256": "108F9F1BD77E2F2327E2BFE79B68BC88EB3146001DE1E9C128C6325D9225E677"
+  },
+  {
+    "Bytes": 614,
+    "Path": "tools/io-audit-v2/Import-IOAudit.ps1",
+    "SHA256": "7E4CEC864CF7DF42E1DB9AACA34A8591C02BA64F2BC082E93109FE622491E55A"
+  },
+  {
+    "Bytes": 2864,
+    "Path": "tools/io-audit-v2/Invoke-IOAudit.ps1",
+    "SHA256": "307EAB75CE0646B94459A0267B9C4D95CC2BF0167EFFD54DC72FA4B0AA4076DF"
+  },
+  {
+    "Bytes": 10204,
+    "Path": "tools/io-audit-v2/MetadataJson.cs",
+    "SHA256": "B9F1322D4C86D84FCE9AF42DDD2F1FCB3AB01D62E4726E3B3D4DD336148C970B"
+  },
+  {
+    "Bytes": 20648,
+    "Path": "tools/io-audit-v2/RawJournal.cs",
+    "SHA256": "6E724C9822FF35BEC765A02AB532AF100D990021926E969F8A6DC0D03C15718B"
+  },
+  {
+    "Bytes": 825,
+    "Path": "tools/io-audit-v2/RawJournal.ps1",
+    "SHA256": "9B65E2AFDEEDC28A118A3300301B38CC5EFF9F736C2C725CA7E3F06BD36550A0"
+  },
+  {
+    "Bytes": 7458,
+    "Path": "tools/io-audit-v2/README.md",
+    "SHA256": "A12D88180FE25286AD16587945FA0706AB72E2E6D22E40EF90985AB5A7E014A1"
+  },
+  {
+    "Bytes": 20568,
+    "Path": "tools/io-audit-v2/Test-IOAudit.ps1",
+    "SHA256": "C72645E76D0CB5344C996EAA5212048A4BD59437FBA3AB00AD93BE8026BAAC62"
+  },
+  {
+    "Bytes": 11776,
+    "Path": "tools/qdb/qdb.exe",
+    "SHA256": "C2589DADC81EB910D53D08AC90A6DDF1ED39D6C44958AA17C9FB180358F42595"
+  },
+  {
+    "Bytes": 591,
+    "Path": "training/abi32-v11/validate-slot.bf",
+    "SHA256": "74CD3B02717B8A85CA20D6E48DBF76BBC41043198F049C063D288D98F36418AD"
+  },
+  {
+    "Bytes": 754,
+    "Path": "training/codec32-v11/metadata-to-count.bf",
+    "SHA256": "483666BDFEE5D453A63A27788A5868142D0387FFEB8CFECBC717EEEE90F6195E"
+  },
+  {
+    "Bytes": 1124,
+    "Path": "training/codec32-v11/validate-text.bf",
+    "SHA256": "4AD73266DAB7B73078681099D98EFFE75D3BC4F54AECDE8F28AC5F7582D00048"
+  },
+  {
+    "Bytes": 824,
+    "Path": "training/codec32-v11/verify.bf",
+    "SHA256": "02C3EABB9CAFD75B7667CE888F55A2AE52D6E4C9FE9104365B112E8B29D24FB9"
+  },
+  {
+    "Bytes": 188829,
+    "Path": "training/codevec32-v1/stream.bf",
+    "SHA256": "CACA3878A352986A955F2C194374C50886F42760C2C2D4A74EA1340FA4E08EC8"
+  },
+  {
+    "Bytes": 34306,
+    "Path": "training/compactlookup32-v1/predict-feature.bf",
+    "SHA256": "70171572B5BC2D6EF454BE86599E2FB0B5A734B8B91A3A82FE981EA6A54913B2"
+  },
+  {
+    "Bytes": 191085,
+    "Path": "training/compactlookup32-v1/predict-quad.bf",
+    "SHA256": "A449F15CB2B77C7BD6F2E1E7A681B3D27B39B1EAA1FA7B05BD78FAAF7DE248B3"
+  },
+  {
+    "Bytes": 5336,
+    "Path": "training/compat32-v11/verify-long.bf",
+    "SHA256": "8317E7FB5096CEAEC46BA41721BDC8A59C7754B1D1EAC81D1F7CE6D83144C12F"
+  },
+  {
+    "Bytes": 29,
+    "Path": "training/freqlookup32-v1/labels-to-bias.bf",
+    "SHA256": "A0B56B303B5D424B85DBC50CC371A85AD7C204C30948AB5E2DFA23EEB4886B5D"
+  },
+  {
+    "Bytes": 392,
+    "Path": "training/headobjective32-v11/error.bf",
+    "SHA256": "73AACEAF4E62F44D46065D9299F6230EF6E45A34C0EDCF0C9FB4F9EA4BCC0C16"
+  },
+  {
+    "Bytes": 16270,
+    "Path": "training/hybridnative32-v1/reference.bf",
+    "SHA256": "8022FBB02627FA3FE75B9F4D7CD48FD9A271253841ECBB3DF5F13603CCB7857C"
+  },
+  {
+    "Bytes": 402,
+    "Path": "training/nextchar32-v11/decimal2.bf",
+    "SHA256": "8206F5625CE578AFA26EAEFD08AFD92C6CBA6FD47858DE5EB574D7777C29E687"
+  },
+  {
+    "Bytes": 513,
+    "Path": "training/objective32-v11/target-label-clean.bf",
+    "SHA256": "39BB0BEE47F22899169776D5702F158E3989E774CA4A53BC705BC5560A6D5571"
+  },
+  {
+    "Bytes": 188,
+    "Path": "training/textdata32-v1/shift-reference.bf",
+    "SHA256": "06C7C98A588BCBFD2BD63C70173FF5CECB85069D6BE2B5B62E8C21FABCB54C1C"
+  },
+  {
+    "Bytes": 21430,
+    "Path": "training/texteval32-v1/compare.bf",
+    "SHA256": "9486297BF4EC7A19F5A1381C2856A0338A8764601B1381731EA8A44A71159396"
+  },
+  {
+    "Bytes": 16591,
+    "Path": "training/texteval32-v1/invert.bf",
+    "SHA256": "5D2625EE6664331F99EE6C63B4670F6D5D297DF9361209CECC7FBA4A52357D24"
+  },
+  {
+    "Bytes": 13471,
+    "Path": "training/texthybrid32-v1/sum-flags.bf",
+    "SHA256": "792492D410784FD10A933136D5BD39FF5EEF2249A468CCE1C358ED9B5456EC14"
+  },
+  {
+    "Bytes": 1795,
+    "Path": "training/textmetric32-v1/reference.bf",
+    "SHA256": "C84B34AC6E4BB68E3EE9A8C90CDDDE21A50782B43A0D480CA52AEE07DDF68065"
+  },
+  {
+    "Bytes": 16780,
+    "Path": "training/textrefbatch32-v1/decimal.bf",
+    "SHA256": "AD5A0EB0CE03449267718A84A8F1E802106EA1B108B57D359A696E7D4119643A"
+  },
+  {
+    "Bytes": 16553,
+    "Path": "training/textrefbatch32-v1/embed.bf",
+    "SHA256": "1170D1D38DD3A32AF4F1EB58BB161C4CEAB91A25E85BD98A05F6151C153A389B"
+  },
+  {
+    "Bytes": 16905,
+    "Path": "training/textrefbatch32-v1/residual.bf",
+    "SHA256": "2EE55FDC30C9A8360347F2B831D325CACB6ECBFD6EC66AADF1834E20FE939BF6"
+  },
+  {
+    "Bytes": 16388,
+    "Path": "training/textrefbatch32-v1/safe.bf",
+    "SHA256": "12DE7EE8F797A40D2127B84D2936F06C2DA499A897E6798545DF7B0BEAA46BAC"
+  },
+  {
+    "Bytes": 16697,
+    "Path": "training/textrefbatch32-v1/score.bf",
+    "SHA256": "526D93E1D77318E53B64404DB28F9D239C5EA3F9F43810AAEC824703CA0ADF3E"
+  },
+  {
+    "Bytes": 16530,
+    "Path": "training/textrefbatch32-v1/vector.bf",
+    "SHA256": "5255437C85F32C47DD1483C442DB873E2416201B38ED31AFD695742CA9C416E3"
+  },
+  {
+    "Bytes": 18494,
+    "Path": "training/textrefbatch32-v1/weighted.bf",
+    "SHA256": "299B7A5BD2CB3528401B3316BCB0686AD6140D9B99B0BC5A6430044EA6165D23"
+  },
+  {
+    "Bytes": 166,
+    "Path": "training/wordcodec32-v1/equal8-stream.bf",
+    "SHA256": "7798BFD52B270060D1213B7A7DB67B9BE46F492DD0A591766F7B4FC741D7DEE8"
+  },
+  {
+    "Bytes": 1652,
+    "Path": "training/wordcodec32-v1/lex.bf",
+    "SHA256": "7F59D5EE7B7834858D5153BF732BFC8490359ACAD4426D7AE702CB397BBCCC6D"
+  },
+  {
+    "Bytes": 548,
+    "Path": "training/wordcodec32-v1/read-eight-dump.bf",
+    "SHA256": "47BB911ABDC4679F523274200BF08E9FD04F794F31B48430F20DB3FA76B726D1"
+  },
+  {
+    "Bytes": 294,
+    "Path": "training/wordcodec32-v1/reference-print.bf",
+    "SHA256": "6AB55BD8C3FCAD770D085459BFE97D35115C2989642CCB65E05B4869805A754D"
+  },
+  {
+    "Bytes": 168,
+    "Path": "training/wordcodec32-v1/select-ids.bf",
+    "SHA256": "F67F8148912A6B941DB9E3DE06B7AE4FCD322F4D9E15DF0FB8B31E70A471EC02"
+  },
+  {
+    "Bytes": 19518,
+    "Path": "training/wordqa-codec32-v1/decode.bf",
+    "SHA256": "BE9AC41B14044157D51E4447FEAA0EBE7B249EEA0EFA985C3DDA27CC4B6B41CE"
+  },
+  {
+    "Bytes": 396,
+    "Path": "training/wordqa-codec32-v1/lookup-reference.bf",
+    "SHA256": "90E70802BC539C1581FA7B199C44EFBD9D97A8FF0CA844DBFB768B5CCB37CFF7"
+  },
+  {
+    "Bytes": 2109,
+    "Path": "training/wordqa-codec32-v1/vocabulary.json",
+    "SHA256": "260428756AA06F2B2DE1973CE78050188CF0DE3DB25AD03AECE15BA4804D4B42"
+  },
+  {
+    "Bytes": 2434,
+    "Path": "training/wordqa-context8-v1/records.bf",
+    "SHA256": "81510B3FC5ADF09EF84E03B86B030C00C38C1208B927E9F61FE14F801F2DBE21"
+  },
+  {
+    "Bytes": 377,
+    "Path": "training/wordqa-context8-v1/shift.bf",
+    "SHA256": "AF7C69E6E246FDCA3531A2E156D6D1EDB700AC5A5CAEBC820FA702D3F6FBD9F5"
+  },
+  {
+    "Bytes": 313,
+    "Path": "training/wordqa-copy8-v1/normalize.bf",
+    "SHA256": "DB04C6EC77B722A752807090B39146B861FAFBCF39EFB49232398F09214746F2"
+  },
+  {
+    "Bytes": 917,
+    "Path": "training/wordqa-copy8-v1/resolver.bf",
+    "SHA256": "75E1E6E06AB92B6BC6FEA4D85E48B8EFA63C4AB115AB9A66F171314AF0AB0F81"
+  },
+  {
+    "Bytes": 591659,
+    "Path": "training/wordqa-native8-v1/predict.bf",
+    "SHA256": "DB8F25014A7D0D9DE2351FA05ED7EB20E4DAE50DF07BEC37384D9A0729A2D02D"
+  },
+  {
+    "Bytes": 636,
+    "Path": "training/wordqa-pool8-v1/stream.bf",
+    "SHA256": "666DE1CD4AE4EB98DA26435027493DFCF46895971B2856BD1559E7264FC04349"
+  },
+  {
+    "Bytes": 7609,
+    "Path": "wordqa-backoff32-preflight.ps1",
+    "SHA256": "8C0601343AC03FF5FEB314E485E1CCB31F0F6F7E2E24C1836BED3CE3AF668523"
+  },
+  {
+    "Bytes": 6407,
+    "Path": "wordqa-codec32-functions.ps1",
+    "SHA256": "00BF25B6CA22466436527306F3778387DF90BB3AC40A25AF03F1EF1C6C2A6B13"
+  },
+  {
+    "Bytes": 2477,
+    "Path": "wordqa-context8-functions.ps1",
+    "SHA256": "AED5865F132001E320BB64F4D7FB74A6D67A4975441E96D5FBE7B5EC50F18787"
+  },
+  {
+    "Bytes": 3733,
+    "Path": "wordqa-copy8-functions.ps1",
+    "SHA256": "6D8EB3D773F043375BBE285B91BF528461FBA4DA111528771885CC495B7BCD1C"
+  },
+  {
+    "Bytes": 8336,
+    "Path": "wordqa-learncopy8-generation.ps1",
+    "SHA256": "DDD12C10B8DF82CAFBD4B7E8CF5A6BCB99F8C805E8055503BA746253126421BD"
+  },
+  {
+    "Bytes": 8432,
+    "Path": "wordqa-native32-functions.ps1",
+    "SHA256": "36389F162E6D54855BC51B2012B57C00F09092560EE3C097EB487E4D9E78AAEF"
+  },
+  {
+    "Bytes": 6700,
+    "Path": "wordqa-native8-functions.ps1",
+    "SHA256": "97A959CF8254E66D6BDF0684A02B4C730113B480BE10524928DF1612300BE3EA"
+  },
+  {
+    "Bytes": 1534,
+    "Path": "wordqa-pool8-functions.ps1",
+    "SHA256": "4A73EC14D22539C8C0DCEF5A4F7C2A63E3207FB9AB36737C2BFEF7A034724BDB"
+  },
+  {
+    "Bytes": 5859,
+    "Path": "wordqa-records32-preflight.ps1",
+    "SHA256": "761D6BA972BDC6D5FE5E91D0700BAA257798F525D049CE507200D609C63AD209"
+  }
+]

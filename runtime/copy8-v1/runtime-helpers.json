@@ -1,0 +1,21 @@
+[
+  "textdata32-testlib.ps1",
+  "freqcount32-functions.ps1",
+  "freqtable32-functions.ps1",
+  "textlearn32-functions.ps1",
+  "textrefbatch32-functions.ps1",
+  "texteval32-functions.ps1",
+  "textgen32-functions.ps1",
+  "codevec32-functions.ps1",
+  "compactlookup32-functions.ps1",
+  "hybridnative32-functions.ps1",
+  "wordqa-codec32-functions.ps1",
+  "wordqa-records32-preflight.ps1",
+  "wordqa-backoff32-preflight.ps1",
+  "wordqa-native32-functions.ps1",
+  "wordqa-context8-functions.ps1",
+  "wordqa-pool8-functions.ps1",
+  "wordqa-native8-functions.ps1",
+  "wordqa-copy8-functions.ps1",
+  "wordqa-learncopy8-generation.ps1"
+]

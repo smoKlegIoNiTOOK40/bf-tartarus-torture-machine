@@ -1,0 +1,9 @@
+{
+  "BFLowerBoundFlag": "1",
+  "MaxEvaluations": 401,
+  "Criterion": "whole-noun two-fold resolved word/EOS token errors",
+  "WeightsSHA256": "5F308E649704B256E9A49F1525B25DE22C7992701136C414DCC20C71C7900BEE",
+  "Evaluations": 27,
+  "BFSelected": true,
+  "ExternalNumericalRuns": 0
+}

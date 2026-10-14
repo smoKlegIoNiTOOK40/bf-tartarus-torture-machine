@@ -1,0 +1,8 @@
+{
+  "ModelHashesMatch": true,
+  "Status": "PASS",
+  "GoalComplete": false,
+  "SearchEvaluations": 27,
+  "NumericalArithmetic": "handwritten BF",
+  "QualityGatesPassed": true
+}

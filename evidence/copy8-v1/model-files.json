@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "selected.weights",
+    "Bytes": 324,
+    "SHA256": "5F308E649704B256E9A49F1525B25DE22C7992701136C414DCC20C71C7900BEE"
+  },
+  {
+    "Path": "selected.feature.labels",
+    "Bytes": 450,
+    "SHA256": "675A77CD03067C2742E2C5BCE50309289BF3C5896258008F23F1DA1B9EE17762"
+  },
+  {
+    "Path": "selected.fine.labels",
+    "Bytes": 4096,
+    "SHA256": "C02A8CB94F5A7594A4082CFB507885279434F263CC97F0B45BF6F7142BDEB133"
+  },
+  {
+    "Path": "selected.bigram.labels",
+    "Bytes": 32,
+    "SHA256": "F1CBC68660F3FC27D23D8C1103614ADD7BFCF76E1C31E06BC27385A95E8FBCA7"
+  }
+]

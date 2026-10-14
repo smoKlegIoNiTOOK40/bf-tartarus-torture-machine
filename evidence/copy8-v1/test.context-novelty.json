@@ -1,0 +1,8 @@
+{
+  "Pairs": 56448,
+  "ActualLinkedInputsUseActualGeneration": true,
+  "OverlapSafeWord": "AAAA",
+  "RawContextBytes": 16,
+  "ComparedInBF": true,
+  "GoldContextDiagnostic": true
+}

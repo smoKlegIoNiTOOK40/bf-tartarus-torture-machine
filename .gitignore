@@ -1,0 +1,8 @@
+# Per-request BF outputs and local build products.
+runtime/**/runs/
+gui/runs/
+gui/checks/
+gui/startup-error-*.log
+Tartarus.exe
+release/
+*.tmp

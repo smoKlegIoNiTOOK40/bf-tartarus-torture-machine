@@ -1,0 +1,13 @@
+{
+  "ModelBytes": 4902,
+  "WarmupSourceSnapshot": "f0eb7128025202ad37d1da511f08b1584f3a29bcf368aec9c793a2a380049d3a",
+  "SearchEvaluations": 27,
+  "TestExact": "48/48",
+  "TestLinked": "16/16",
+  "ValidationLinked": "8/8",
+  "SourceSnapshot": "4224070eb69de660b76253faa50c03d0ac726e46102bbf3fa796425d2ffa5054",
+  "Kind": "learned-copy-position",
+  "Status": "PASS",
+  "ValidationExact": "24/24",
+  "GoalComplete": false
+}

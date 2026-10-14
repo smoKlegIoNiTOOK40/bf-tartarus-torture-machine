@@ -1,0 +1,480 @@
+{
+  "SearchEvaluations": 27,
+  "MaxEvaluations": 401,
+  "Train": {
+    "ExactErrorsDecimal": "00000",
+    "Documents": 96,
+    "TokenErrorWord": "AAAA",
+    "LinkedErrorsDecimal": "00000"
+  },
+  "External": {
+    "test": {
+      "bigram": {
+        "TokenErrorWord": "AAFI",
+        "ExactErrorWord": "AACA",
+        "LinkedErrorsDecimal": "00016",
+        "ExactErrorsDecimal": "00032",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          }
+        }
+      },
+      "unigram": {
+        "TokenErrorWord": "AAGI",
+        "ExactErrorWord": "AADA",
+        "LinkedErrorsDecimal": "00016",
+        "ExactErrorsDecimal": "00048",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          }
+        }
+      },
+      "nohistory": {
+        "TokenErrorWord": "AAHI",
+        "ExactErrorWord": "AADA",
+        "LinkedErrorsDecimal": "00016",
+        "ExactErrorsDecimal": "00048",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          }
+        }
+      },
+      "selected": {
+        "TokenErrorWord": "AAAA",
+        "ExactErrorWord": "AAAA",
+        "LinkedErrorsDecimal": "00000",
+        "ExactErrorsDecimal": "00000",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00000",
+            "Documents": 8
+          }
+        }
+      },
+      "word": {
+        "TokenErrorWord": "AAFK",
+        "ExactErrorWord": "AACM",
+        "LinkedErrorsDecimal": "00016",
+        "ExactErrorsDecimal": "00044",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00006",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00006",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          }
+        }
+      },
+      "eos": {
+        "TokenErrorWord": "AAHI",
+        "ExactErrorWord": "AADA",
+        "LinkedErrorsDecimal": "00016",
+        "ExactErrorsDecimal": "00048",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          }
+        }
+      },
+      "zero": {
+        "TokenErrorWord": "AAGI",
+        "ExactErrorWord": "AADA",
+        "LinkedErrorsDecimal": "00016",
+        "ExactErrorsDecimal": "00048",
+        "Documents": 48,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "place-who": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          },
+          "item-what": {
+            "ErrorsDecimal": "00008",
+            "Documents": 8
+          }
+        }
+      }
+    },
+    "validation": {
+      "bigram": {
+        "TokenErrorWord": "AACM",
+        "ExactErrorWord": "AABA",
+        "LinkedErrorsDecimal": "00008",
+        "ExactErrorsDecimal": "00016",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          }
+        }
+      },
+      "unigram": {
+        "TokenErrorWord": "AADE",
+        "ExactErrorWord": "AABI",
+        "LinkedErrorsDecimal": "00008",
+        "ExactErrorsDecimal": "00024",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          }
+        }
+      },
+      "nohistory": {
+        "TokenErrorWord": "AADM",
+        "ExactErrorWord": "AABI",
+        "LinkedErrorsDecimal": "00008",
+        "ExactErrorsDecimal": "00024",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          }
+        }
+      },
+      "selected": {
+        "TokenErrorWord": "AAAA",
+        "ExactErrorWord": "AAAA",
+        "LinkedErrorsDecimal": "00000",
+        "ExactErrorsDecimal": "00000",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00000",
+            "Documents": 4
+          }
+        }
+      },
+      "word": {
+        "TokenErrorWord": "AACN",
+        "ExactErrorWord": "AABG",
+        "LinkedErrorsDecimal": "00008",
+        "ExactErrorsDecimal": "00022",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00003",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00003",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          }
+        }
+      },
+      "eos": {
+        "TokenErrorWord": "AADM",
+        "ExactErrorWord": "AABI",
+        "LinkedErrorsDecimal": "00008",
+        "ExactErrorsDecimal": "00024",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          }
+        }
+      },
+      "zero": {
+        "TokenErrorWord": "AADE",
+        "ExactErrorWord": "AABI",
+        "LinkedErrorsDecimal": "00008",
+        "ExactErrorsDecimal": "00024",
+        "Documents": 24,
+        "Families": {
+          "place-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "place-who": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "linked-where": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          },
+          "item-what": {
+            "ErrorsDecimal": "00004",
+            "Documents": 4
+          }
+        }
+      }
+    }
+  },
+  "MilestonePassed": true,
+  "FullGoalComplete": false
+}
