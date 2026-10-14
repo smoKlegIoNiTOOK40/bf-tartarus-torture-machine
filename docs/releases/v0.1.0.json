@@ -1,0 +1,67 @@
+{
+  "ModelBytes": 4902,
+  "VocabularyWords": 30,
+  "ThirdPartyAttributionIncluded": true,
+  "Assets": [
+    {
+      "OriginalFilesUnchanged": true,
+      "Files": 4312,
+      "SHA256": "8BFF9E03997C2E30561AD30B1B01344B28D2A5C08F0C1F8137D7855CB24F63FD",
+      "ContentScan": "PASS",
+      "Name": "tartarus-copy8-windows-v0.1.0.zip",
+      "OriginalZIP": "tartarus-dialogue-window-v1.zip",
+      "OriginalSHA256": "D5886208DC661B970D12A5E09EB9C6DBFFFA505D3A94761741F4C50914BAA9DD",
+      "Bytes": 9234468
+    },
+    {
+      "OriginalFilesUnchanged": true,
+      "Files": 85,
+      "SHA256": "68A2CEC62CB723031D62F54730AA4948758E389A3A5720B14DB511FD0D810B9F",
+      "ContentScan": "PASS",
+      "Name": "tartarus-copy8-cli-v0.1.0.zip",
+      "OriginalZIP": "wordqa-copy8-v1.zip",
+      "OriginalSHA256": "9B4499DD079B9E60DFAEABC6C197184AE51339EEC570C2D1194607B1F8344DE7",
+      "Bytes": 128058
+    },
+    {
+      "OriginalFilesUnchanged": true,
+      "Files": 1823,
+      "SHA256": "F8301301427318F6950C32AF24CF361A8C2310A311D9FD9AA74D85AD6609C411",
+      "ContentScan": "PASS",
+      "Name": "tartarus-copy8-reproduce-v0.1.0.zip",
+      "OriginalZIP": "wordqa-copy8-repro-v1.zip",
+      "OriginalSHA256": "96D59A0C1254C95F35E5EF8321AB24454F0375FD51AC70D3BBD8F7CED6889335",
+      "Bytes": 9074733
+    }
+  ],
+  "ContextWords": 8,
+  "Version": "v0.1.0",
+  "TrainingReproduction": "PASS; all four model files match",
+  "ModelFiles": [
+    {
+      "Path": "selected.weights",
+      "Bytes": 324,
+      "SHA256": "5F308E649704B256E9A49F1525B25DE22C7992701136C414DCC20C71C7900BEE"
+    },
+    {
+      "Path": "selected.feature.labels",
+      "Bytes": 450,
+      "SHA256": "675A77CD03067C2742E2C5BCE50309289BF3C5896258008F23F1DA1B9EE17762"
+    },
+    {
+      "Path": "selected.fine.labels",
+      "Bytes": 4096,
+      "SHA256": "C02A8CB94F5A7594A4082CFB507885279434F263CC97F0B45BF6F7142BDEB133"
+    },
+    {
+      "Path": "selected.bigram.labels",
+      "Bytes": 32,
+      "SHA256": "F1CBC68660F3FC27D23D8C1103614ADD7BFCF76E1C31E06BC27385A95E8FBCA7"
+    }
+  ],
+  "SealedNumericalFilesUnchanged": true,
+  "Experimental": true,
+  "Date": "2026-10-14",
+  "Model": "Copy8",
+  "PackagingStatus": "VERIFIED"
+}

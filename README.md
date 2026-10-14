@@ -1,118 +1,174 @@
 # Tartarus
 
-![Tartarus calling card: Pure Brainfuck Transformer, 32 tokens, 324 weight fields](assets/tartarus-card.png)
+**A tiny Brainfuck model that answers questions and remembers the previous turn.**
 
-**A tiny Transformer in handwritten Brainfuck, built by a human + Codex duo.**
+Tartarus is a human + Codex experiment in handwritten Brainfuck. It has grown
+from a small Transformer forward pass into a learned, restricted dialogue model
+with a Windows interface, an offline CLI and reproducible BF training.
 
-Tartarus explores Transformer inference, autoregressive generation and bounded discrete learning with all model mathematics executed in Brainfuck. The local prototype now has a **32-slot forward engine, 324 weight fields and a BF-controlled generation loop**. Its tokenizer and renderer support **all 26 lowercase Latin letters and space**.
+**14 October 2026 · Copy8 milestone · first runnable release: v0.1.0.**
 
-**Public status: documentation only.** Implementation, weights, corpora, runnable tests and detailed technical reports remain local. The results below are locally recorded and cannot yet be reproduced from this repository.
+[Download the release](https://github.com/smoKlegIoNiTOOK40/bf-tartarus-torture-machine/releases/tag/v0.1.0)
+· [Русское описание](README.ru.md) · [Results](docs/RESULTS.md)
+· [Architecture](docs/ARCHITECTURE.md) · [Reproduce training](docs/REPRODUCE.md)
 
-Status recorded on **10 October 2026 — stage 46, V11**.
+![Tartarus answering a linked who/what question in its Windows interface](assets/dialogue-copy8.png)
 
-## Current local prototype
+## Try it
 
-| Component | Current implementation |
+Download **tartarus-copy8-windows-v0.1.0.zip** from the release, extract the
+whole folder and open **Tartarus.exe**. Windows PowerShell 5.1 and WPF are
+already part of the supported Windows setup. No network, Python, ML library
+or model server is needed. The interface is currently Russian; model input
+is lowercase English.
+
+The default mode is **Диалог · 8 слов**. Select an example and press **Спросить**:
+
+```text
+mira carries a red key who
+→ mira
+
+what
+→ a red key
+```
+
+For a location:
+
+```text
+oren rests near the bench who
+→ oren
+
+where
+→ near the bench
+```
+
+The followup receives the model's actual previous answer. **Новая беседа**
+starts with empty memory. Selecting a different example also starts fresh.
+The older Who v1 and Word 80 continuation modes remain in the model picker.
+
+This is a deliberately small language of explicit facts followed by
+`who`, `what` or `where`, plus short linked questions. Arbitrary English,
+open-ended chat, long conversations and unseen vocabulary are outside the
+verified scope. These examples show the supported format, not general fluency.
+
+### Command line
+
+Clone this repository, then use the included, already trained runtime:
+
+```powershell
+Set-Location .\runtime\copy8-v1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\demo.ps1 -Prompt 'mira carries a red key who' -OutputDirectory .\runs\first
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\demo.ps1 -Prompt 'what' -HistoryContextPath .\runs\first\final-history.context
+```
+
+Use a fresh output directory for another run. Omit `HistoryContextPath` to
+start without previous memory. The standalone CLI ZIP has the same runtime.
+From the repository root, `powershell.exe -NoProfile -ExecutionPolicy Bypass
+-File .\Check.ps1` verifies its sealed sources and model without inference.
+
+## What is inside?
+
+| Component | Current dialogue model |
 | --- | --- |
-| Architecture | One quantized decoder block, one causal attention head |
-| Dimensions | Model width 2, FFN hidden width 2, context 4 |
-| Forward pass | Embeddings, Q/K/V/O projections, normalized causal attention, residuals, signed ReLU FFN and output heads |
-| Arithmetic | Integer arithmetic, signed values, wide accumulators and signed 16-bit logits |
-| Native capacity | 32 embedding slots and 32 output heads |
-| Character mapping | 29 assigned IDs: 26 lowercase letters, space, BOS and EOS; 3 reserved slots |
-| Migrated learned vocabulary | 16 IDs: BOS, EOS, space and the letters `a b c d e h i l m n o r t` |
-| Weights | Fixed V11 format: 324 fields in a 336-byte request packet |
-| Generation | Weights loaded once; full forward, context shift, step counter and EOS stopping run inside BF |
-| Step budget | 0–99 steps; diagnostic replay continues for the requested count, including after EOS |
-| Current entry | Trusted inputs from the tested migration family; general packet/family validation is next |
+| Learned model payload | **4,902 bytes**, four files |
+| Vocabulary | **30 words**, plus BOS/EOS |
+| Available context | **8 words**, including actual previous output |
+| Questions | Person, object and place: `who`, `what`, `where` |
+| Generation | Learned copy-position actions resolved to current context words by BF |
+| Training | Bounded discrete embedding search and BF-fitted action heads |
+| Backbone | Width-two quantized Transformer-derived features; fixed core |
+| Host | PowerShell/WPF for UI, process transport, byte framing and archives |
+| Numerical execution | Ordinary, unmodified qdb interpreting handwritten BF |
 
-The calling card's “32 tokens” describes engine capacity. The codec and numerical forward path support the full alphabet, and hand-configured copy controls exercise every letter. **The learned bundles have not yet been trained on the added letters.** Alphabet support does not imply general language ability.
+The 4,902 bytes include **324 weight bytes and 4,578 table-label bytes**.
+They are not 4,902 independently trained Transformer weights. Most of the
+backbone is fixed. Eight-word pooling and learned copy heads extend the
+original four-word backbone; [architecture details](docs/ARCHITECTURE.md)
+explain the difference from a conventional language model.
 
-## What it currently generates
+## Measured results
 
-Separate preserved bundles produce these short sequences from their tested starting contexts and prefixes:
+The synthetic corpus, split, search budget, comparisons and success gates
+were fixed before numerical training. The author had seen the raw heldout
+examples; this is not a blind benchmark.
 
-| Bundle | Sequences |
+| Partition | Exact answer and EOS |
+| --- | ---: |
+| Train | **96/96** |
+| Validation, heldout `book` | **24/24** |
+| Test, heldout `door` / `bench` | **48/48** |
+| Linked validation episodes, both answers | **8/8** |
+| Linked test episodes, both answers | **16/16** |
+
+Train-only search reached its BF-verified zero-error lower bound after
+**27 of at most 401 evaluations**. All four predeclared baselines were worse
+on both external splits; removing the older half of memory also made results
+worse. Linked generation used actual first answers, never gold-name substitution.
+
+A fresh full reproduction passed **3,303 synthetic warmup assertions**, then
+**137,903 learning/evaluation assertions with 23,433 physical BF invocations**.
+All four exported model files matched the original hashes exactly. Numerical
+source, raw-I/O and artifact checks passed. [Results and limitations](docs/RESULTS.md)
+include baseline errors and the verification scope; [the contract](docs/COPY8-CONTRACT.md)
+is preserved as written before training.
+
+## Downloadable packages
+
+| Asset | Use |
 | --- | --- |
-| Earlier multiword bundle | `hello hi`, `hi hi` |
-| Curriculum bundle | `terra to`, `to to` |
+| `tartarus-copy8-windows-v0.1.0.zip` | Windows UI, trained dialogue and older model modes |
+| `tartarus-copy8-cli-v0.1.0.zip` | Minimal standalone CLI, trained model and numerical checks |
+| `tartarus-copy8-reproduce-v0.1.0.zip` | Complete frozen source, corpus, training and evaluation; PowerShell 7 |
+| `SHA256SUMS.txt` | Checksums of the three ZIP files |
 
-The migrated bundles reproduce those sequences in the new 32-head BF loop and stop at EOS. Each next ID comes from a Transformer forward pass. The decoder maps IDs to characters; it does not store completed phrases. No host process feeds predictions back between generation steps.
-
-Learning is still a constrained discrete search over selected parameters, with most fields fixed by hand. The latest joint lexical-fit bundle retains errors such as `helo hi` and `telo hi`:
-
-| Partition | Next-token examples | Errors |
-| --- | ---: | ---: |
-| Training | 18 | 4 |
-| Validation | 12 | 9 |
-| Test | 12 | 5 |
-| Total | 42 | 18 |
-
-These figures describe a tiny, iteratively developed synthetic corpus, not an untouched language benchmark. Stage 46 added compatibility and generation infrastructure; it did not retrain the model or fix its existing errors.
-
-## Latest milestone: 16 → 32 compatibility
-
-A handwritten BF bridge migrates **16 existing bundles from 180 to 324 weight fields**, preserving their original embeddings, core and output heads. The added embeddings are zero; each added head has a fixed score of −99. Original bundles and earlier engines remain available locally as regressions.
-
-Exact preservation of the old argmax is conditional: it applies to raw profile 0 when the old maximum is at least −99. Equal scores keep the earlier old ID. A deliberate −100 counterexample confirms that an added head can otherwise win. Semantic profiles mask different IDs and are not covered by that exact equivalence claim.
-
-The new BF loop loads weights once, clears transient state between steps, executes the complete backbone and all 32 heads, saves the selected ID, shifts the four-ID context and manages the count and EOS. The tested autoregressive entry is limited to the migrated, bounded old-vocabulary family in raw profile 0. Arbitrary V11 weights and general semantic-profile generation are not certified by this milestone.
-
-## Verification
-
-Numerical references, labels, losses, selection, weight export and numerical assertions execute in BF through an ordinary, unmodified interpreter. The independent reference uses a separate lookup and scalar calculation path; the earlier 16-ID engine serves as an additional comparator.
-
-Stage 46 freshly checked:
-
-- **3,040 complete records on each of the native16 and native32 engines:** 1,264 single-step records and 1,776 diagnostic replay records. Native32 records include all 32 logits, winning score and ID, checked against BF reference results; native16 records provide a further compatibility comparison.
-- **80 EOS-generation cases on each engine**, covering 16 starts and budgets of 0, 1, 2, 9 and 99 steps.
-- **600 executed tape/pointer boundary checks**, with clean snapshots and **1,200 deliberately injected pointer or cell faults**.
-- Preservation of all 324 fields across all 16 migrated bundles, full 2,700-cell final-state checks and an independently updated final context.
-- Exact byte-concatenation and source/hash audits covering **1,819 assembled programs and 1,986 BF sources** for this stage.
-
-The stage recorded **5,675 positive checks and 1,213 expected negative controls across four passing suites**. Negative controls include the injected faults, dirty checker inputs and the unsupported −100 migration case; they are expected detections, not unexplained failures.
-
-The cumulative local ledger is **208,819 positive checks, 12,308 expected negative controls and 149 passing suite verdicts**. The latest aggregate combines four fresh suites with 145 saved earlier verdicts. It is not a fresh rerun of all historical tests.
-
-The declared stage-46 record set is not an exhaustive 16⁴ or 32⁴ context test. Repeated reference requests reuse already computed BF-result bytes only when their input bytes match exactly; the record count is not a count of distinct oracle calculations. Stage 45 separately checked **10,640 full native32 records** for the hand-configured copy family and its controls. These checks establish numerical behavior within the tested families, not language quality.
+The source checkout includes the minimal runtime, model, GUI sources and
+compact evidence. Use the GUI ZIP to run the window with all three model
+packages. Full research dependencies are distributed in the reproduction
+ZIP rather than adding hundreds of megabytes of assembled probes to Git.
+Large historical local logs remain archived locally; they are not claimed
+as downloadable artifacts. Release packages preserve the verified numerical
+bytes and add English startup instructions and interpreter attribution.
 
 ## The rules
 
-- New BF modules are written by hand; existing modules may be edited by hand. No generator, transpiler, template or macro produces BF commands from another language.
-- Model arithmetic, matrix multiplication, attention, FFN, logits, argmax, context updates and output execute in Brainfuck.
-- Training, synthetic target generation, error counting, candidate selection, weight export and independent numerical verification also execute in BF.
-- An ordinary, unmodified BF interpreter runs the programs. No Python, C, Rust, BLAS, NumPy or external numerical runtime performs model computation.
-- Automated assembly is allowed **only as exact byte copying and concatenation of ready, handwritten BF fragments**, without changing, stripping or adding bytes.
-- Pointer and tape contracts at module boundaries are checked by executed BF tests, including deliberately broken joins. A written contract alone is insufficient.
+- BF source is handwritten. Automated assembly only copies and concatenates
+  ready fragments byte for byte; no transpiler, macro or template generates BF.
+- Model arithmetic, teacher targets, training counts, selection, inference,
+  word copying, decoding and independent numerical verification execute in BF.
+- Host tools handle literal input, files, byte framing, hashes, processes and UI.
+  They do not predict an answer or calculate the model's loss.
+- Executed boundary checks include deliberate bad joins. Source hashes and
+  raw input/output records bind the numerical results to their actual sources.
 
-Host tools edit literal files, route inputs and outputs, invoke the interpreter, and handle byte comparisons, hashes, file sizes and routing metadata. They do not compute model results. Byte-preserving assembly makes the growing codebase easier to manage while retaining handwritten BF computation.
+See [SOURCE-RULES.md](SOURCE-RULES.md). The unmodified interpreter is by
+[Daniel B. Cristofani](https://www.brainfuck.org/); its original readme and
+[attribution](THIRD-PARTY-NOTICES.md) are included.
 
-## Progress and next steps
+## Progress
 
-| Stages | Milestone |
-| --- | --- |
-| Early experiments → 25 | Four-token synthetic tasks, positional copy, word generation, then eight-ID `hello hi` / `hi hi` |
-| 26–40 | 16-ID infrastructure, broader lexical experiments and packet/framing work |
-| 41 | Full lowercase alphabet tokenizer and renderer |
-| 42–44 | 32-slot embedding lookup, 32 output heads, then a complete native32 forward pass on one BF tape |
-| 45 | Expanded numerical coverage of the copy family |
-| **46 — complete** | **Old-bundle migration and BF-controlled native32 autoregression** |
-| 47 — next | Checked inference32: packet framing, allowed weight families, ID/profile boundaries and rejection behavior |
-| 48–49 — planned | 32-target learning objective, a small alphabet corpus, bounded training and separate held-out checks |
-| 50 — planned checkpoint | Alphabet-path generation, EOS/replay, earlier regressions and a consolidated report |
+The previous public update stopped at **stage 46**, with documentation and a
+32-slot character engine. Since then, the project gained checked objectives
+and training, word-level generation, the stage-80 portable model, a first
+Who question model, and this eight-word copy-based dialogue milestone.
 
-The numbering is a working route, not a promise of language ability by stage 50. Additional arithmetic or validation work can move the schedule. Larger context, more capacity and better learned behavior need their own experiments.
+The local workspace was reduced from **50.34 GiB to about 9.81 GiB**, including
+new research and preserved failures. A checked GUI query now retains roughly
+**175–330 KB** instead of copying a roughly 300 MB research bundle. That is
+storage overhead, separate from the 4,902-byte model.
 
-Tartarus does not currently implement backpropagation, general training of all weights, layer normalization or open-ended language generation. A four-ID context and width-two representations are severe limits. The full native32 forward and trusted generation loop work within their tested numerical bounds; the checked entry remains unfinished.
+[Changelog](CHANGELOG.md) · [Archived stage-46 README](docs/history/stage46.md)
+
+Next research directions are more natural question forms and measured memory
+across three or four turns. They are recommendations, not promises of general
+language ability or a schedule tied to stage numbers.
 
 ## Who is building it?
 
-Tartarus is a collaboration between [smoKlegIoNiTOOK40](https://github.com/smoKlegIoNiTOOK40), the human creator, and **OpenAI Codex**, an AI coding agent.
+Tartarus is built by [smoKlegIoNiTOOK40](https://github.com/smoKlegIoNiTOOK40)
+and **OpenAI Codex**. The human creator sets the constraints and direction,
+reviews progress and decides what to publish. Codex assists with design,
+directly authors and edits BF source and host tools, writes documentation
+and runs checks. AI involvement is disclosed explicitly.
 
-The human creator started the project, sets its constraints and direction, reviews progress and decides what gets published. Codex assists with design, directly authors and edits BF source and documentation, and runs verification through the available tools. AI involvement is disclosed explicitly.
-
-## Publication status
-
-This repository currently publishes the README and the creator's updated V11 calling card. Source, model bundles, datasets, runnable tests and detailed reports may be published in a later update. No public reproduction or CI claim is made while those artifacts remain local.
-
-We are not claiming to be the first project to attempt a language model or Transformer in Brainfuck.
+This is an experimental release, not a production chatbot. No claim of being
+the first Brainfuck Transformer or language-model project is made.
